@@ -1,0 +1,46 @@
+[공부할 내용]
+1. 본인만의 컴포넌트 나누는 기준 정의하기!
+2. 컴포넌트가 무엇인지 정의해보기!
+3. 내가 좋아하는 사이트 페이지 하나선정하고 컴포넌트 나눠보기!
+3-1. 페이지 연결 하고 강사님에 내준 과제 순서대로 실행해보기!
+
+
+이런 공통 컴포넌트들을 먼저 구현
+
+
+컴포넌트란?
+프로그래밍에 있어 재사용이 가능한 각각의 독립된 모듈이다. => 모듈로서 이후 시스템을 유지보수 하는데 있어 교체가 가능한 부품이다!?
+조각조각 만들어진 컴포넌트들을 조합하여 화면을 구성할 수 있다.
+
+
+나만의 컴포넌트 나누는 기준 정의하기!
+일단 페이지와 공용으로 사용할 컴포넌트 폴더을 만든다!
+
+페이지에는 
+1. mainPage/ shoppingPage / lifePage 세개로 폴더를 만들어줄거다!
+
+mainPage 에는
+    index.js
+    component > banner.js  
+                sideBanner.js
+                topKategorie.js    .... 어려운데...?
+                contentBox.js => 여기 질문... 드려야지 
+                
+shoppingPage 에는
+    index.js
+    component > slideBanner.js
+                popularItem.js
+                
+lifePage 에는
+    index.js
+    component > slideBanner.js
+                listContent.js
+
+
+컴포넌트 폴더에는
+1. 먼저 Layout파일에 모든 페이지에 적용될 수 있는 헤더, 푸더 를 넣어줄거다 
+2. todaydeal.js/PublicKategorie.js도 여러페이지에 사용되네.. 그럼 요기로..
+
+
+[참조] 
+https://hanamon.kr/%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-component%EB%9E%80/
