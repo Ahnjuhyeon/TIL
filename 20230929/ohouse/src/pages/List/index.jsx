@@ -1,4 +1,4 @@
-import ListPage from "./listPage";
+import ListPage from "./item";
 
 const List = () => {
   const MOCKLIST = [

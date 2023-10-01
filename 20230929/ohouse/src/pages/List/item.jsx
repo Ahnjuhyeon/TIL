@@ -4,6 +4,7 @@ import { styled } from "styled-components";
 const ListPage = ({ mock, MOCKLIST }) => {
   const [isEditMode, setIsEditMode] = useState(false);
   const [isState, setIsState] = useState(false);
+  //접근
   const mocklistRef = useRef(null);
   const onClickEdit = () => {
     setIsState((prev) => !prev);
