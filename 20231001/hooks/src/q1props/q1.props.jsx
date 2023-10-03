@@ -22,8 +22,8 @@ const Q1 = () => {
       {MOCKLIST.map((list) => (
         <Render list={list} key={list} MOCKLIST={MOCKLIST} />
       ))}
-      <JBTN color={"secondary"} size={"large"}>
-        왕 큼
+      <JBTN color={"secondary"} size={"mideum"} Boxsize={"small"}>
+        왕큼
       </JBTN>
     </>
   );
