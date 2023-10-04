@@ -27,18 +27,32 @@ function Q3() {
   const [isJumping, setIsJumping] = useState(false);
 
   const onClickStart = () => {
-    setIsJumping(true);
-    setCount(0);
+    setIsJumping(true); // 시작 버튼을 누르면 줄넘기 시작
+  };
+
+  const onClickStop = () => {
+    setIsJumping(false); // 중지 버튼을 누르면 줄넘기 중지
+    setCount(0); // 줄넘기 횟수를 0으로 고정
   };
 
   useEffect(() => {
-    const rope = setInterval(() => setCount((num) => num + 1), 2000);
+    let interval;
+
+    if (isJumping) {
+      interval = setInterval(() => {
+        setCount((num) => num + 1);
+      }, 2000);
+      console.log("줄넘기 시작");
+    } else {
+      clearInterval(interval); // 중지 상태일 때 타이머 중지
+      console.log("줄넘기 중지");
+    }
 
     return () => {
-      clearInterval(rope);
+      clearInterval(interval); // 컴포넌트 언마운트 시 타이머 정리
       console.log("end");
     };
-  }, []);
+  }, [isJumping]);
 
   return (
     <>
@@ -46,10 +60,15 @@ function Q3() {
       <div>
         <p> 줄넘기 횟수 : {count}</p>
         <Q3components />
-        <p>{count && <button onClick={onClickStart}>줄넘기 시작</button>}</p>
-        <p>
-          <button>줄넘기 중지</button>
-        </p>
+        {isJumping ? (
+          <p>
+            <button onClick={onClickStop}>줄넘기 중지</button>
+          </p>
+        ) : (
+          <p>
+            <button onClick={onClickStart}>줄넘기 시작</button>
+          </p>
+        )}
       </div>
     </>
   );
