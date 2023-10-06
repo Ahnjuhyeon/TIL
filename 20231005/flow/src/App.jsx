@@ -4,6 +4,7 @@
 import "./App.css";
 import Memo from "./2.hook/useMemo";
 import Crud from "./4.CRUD";
+import Crud2 from "./5.CRUD";
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -13,6 +14,8 @@ function App() {
       <Memo />
       <hr />
       <Crud />
+      <hr />
+      <Crud2 />
     </>
   );
 }
