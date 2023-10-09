@@ -37,7 +37,6 @@ const OnePost = ({ postid, post, posts, setPosts, comment }) => {
       <button onClick={onClickFix}>수정</button>
       <button onClick={onClickDel}>삭제</button>
 
-      <hr />
       {/* {isEditMode ? (
         <textarea defaultValue={post.content} ref={postRef}></textarea>
       ) : (
