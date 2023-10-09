@@ -123,11 +123,83 @@ Button 만들어 봤스비다
 ----------------------------------------------------------------------------------------------------
 
 **7. 나는 Promise와 async/await을 왜 사용해야하는지 알고 있으며, 예외처리를 할 수 있다.**
+Promise는 then() 과 catch() 써야 결과값을 콘솔이든 뭐든 받을 수 있음 ?
+
+Promise와 async/await 차이점은
+promise는  대기(pending), 이행(fulfilled), 거부(rejected) 
+
+throw => reject?
+
+
+async/await
+함수에 async 키위드를 붙입니다.
+new Promise... 부분을 없애고 executor 본문 내용만 남깁니다.
+resolve(value); 부분을 return value; 로 변경합니다.
+reject(new Error(…)); 부분을 throw new Error(…); 로 수정합니다.
+
+
 
 (1) 각각 Promise와 async/await은 언제 사용해야할까요?
+
 (2) 이를 활용한 간단한 에제를 만들어보세요
+const condition = true;
+const promise = new Promise((resolve, reject) => {
+  if (condition) {
+    resolve('resolved');
+  } else {
+    reject('rejected');
+  }
+});
+
+promise
+  .then((res) => {
+    console.log(res);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+  직접따라해보고 잘 이해가 됐던 
+
+
+  async / await
+
+(async () => {
+  const condition = true;
+  const promise = new Promise((resolve, reject) => {
+    if (condition) {
+      resolve('resolved');
+    } else {
+      reject('rejected');
+    }
+  });
+
+  try {
+    const result = await promise;
+    console.log(result);
+  } catch (err) {
+    console.error(err);
+  }
+})();
+
 (3) Promise와 async/await의 예외처리는 어떻게 다를까요?
 
+1. Promise는 reject로 예외 처리 할 수 있다.
+function myPromiseErrorFun() {
+  return new Promise((_, reject) => {
+    reject('myPromiseError!');
+  });
+}
+const resultPromise = myPromiseErrorFun().catch((e) => {
+  console.error(e);
+});
+2. async는 throw로 예외 처리 할 수 있다.
+async function myAsyncErrorFun() {
+  throw 'myAsyncError';
+}
+const resultAsync = myAsyncErrorFun().catch((e) => {
+  console.error(e);
+});
 ----------------------------------------------------------------------------------------------------
 
 **8. 나는 비동기를 명확하게 이해하고 있으며, 처리 순서가 어떻게 진행되는지 알고 있다.**
@@ -186,7 +258,7 @@ https://velog.io/@kykim_dev/%EA%B4%80%EC%8B%AC%EC%82%AC%EC%9D%98-%EB%B6%84%EB%A6
     아 여기 써있었네..
 
     useModal 만들어 봤습니다.. 이해는 되는데 더 만들어볼게요 
-    
+
 
 ----------------------------------------------------------------------------------------------------
 
