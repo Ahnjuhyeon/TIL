@@ -265,6 +265,8 @@ https://velog.io/@kykim_dev/%EA%B4%80%EC%8B%AC%EC%82%AC%EC%9D%98-%EB%B6%84%EB%A6
 **10. 나는 백엔드에서 데이터 패칭을 할 수 있으며 이를 UI에 랜더할 수 있다.**
 
 
+
+
 (1) method get, post의 차이를 한글로 정의해보세요
 (2) get에서 URL로 데이터를 전달할 수 있는 방법은 무엇이 있으며 
 	  이를 fetch 혹은 axios를 활용해 전달하려면 어떻게 해야할까요

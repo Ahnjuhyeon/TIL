@@ -82,6 +82,7 @@
 
 yarn vite create@latest 프로젝트명 --template react ==> 요거 안되던데
 yarn create vite ohouse --template react
+yarn create vite 프로젝트명 --template react
   cd test
   yarn --> package install
   yarn dev

@@ -9,3 +9,22 @@ const 변수명 = (()=>{
 useCallback
 -> 어떤 조건이 만족됐을 때만
 -> 의존성 배열에 값이 있으면 그 값 ( 함수만 )만 바뀔때만..?
+
+
+
+axios란?
+브라우저르 위한 promise기반 http 클라이언트이다.
+promise API를 지원
+요청 및 응답 인터셉트 => response를 받기전  request도 
+요청 취소..=> cancelToken 을 사용해라?
+
+사용법
+axios.create 먼저 (커스텀 인스턴스)
+
+
+REST API -> 컴퓨터 시스템끼리 인터넷을 통해 정보를 안전하고 효율적으로 주고 받는??
+
+API 작동 방식에 대한 조건을 부과하는 소프트웨어 아키텍처
+API 개발자는 여러 아키텍처를 사용하여 API를 설계할 수 있다.
+REST 아키텍처 스타일을 따르는 API를 REST API라고 한다.
+REST 아키텍처를 구현하는 웹 서비스를 RESTful 웹 서비스라고 한다. 
