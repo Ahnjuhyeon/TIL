@@ -36,3 +36,13 @@ REST 아키텍처를 구현하는 웹 서비스를 RESTful 웹 서비스라고 �
 프
 
 너무 많아서 이름으로 구분 => rest api
+라우트 => /movie
+겟 -> 조회
+패치 -> 일부수정
+
+
+backendURL => endpoint => http://www.~~~
+파람스
+쿼리스트링
+포스트 데이터
+
