@@ -1,7 +1,8 @@
 import { useEffect } from "react";
 import "./App.css";
 import { GetSearch } from "./apis/search.api";
-import SearchInput from "./page";
+// import SearchInput from "./page";
+import CopyPage from "./page/copyPage";
 
 function App() {
   useEffect(() => {
@@ -13,7 +14,8 @@ function App() {
 
   return (
     <>
-      <SearchInput />
+      {/* <SearchInput /> */}
+      <CopyPage />
     </>
   );
 }
