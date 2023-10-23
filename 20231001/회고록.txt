@@ -489,6 +489,8 @@ axois로 드디어 데이터 패칭 성공
 어떤걸 어려워 했는지
 프로젝트 들어가기 전까지 좀 익혀야 할 것같은데 아직 개념이 정리가 안됐어요! 내일까지 정리하기!
 
+=====================================================================================
+
 10/22
 [공부할 내용]
 리코일 공부!
@@ -509,3 +511,59 @@ const queryClient = new QueryClient(); 적어주고 프로바이더에 값을 �
 어떤걸 어려워 했는지
 아직 미숙해서 내일 한번 더 같이 만들어보기로 함!!
 
+=====================================================================================
+
+10/23
+
+[공부할 내용]
+recoil/react-query 공식 문서 보면서 정리 해보기
+
+[공부한내용]
+어떤걸 했는지
+리코일 공식문서 보면서 내가 이해한 내용 정리!
+
+어떤걸 알게 됐는지
+[Recoil] 
+atom은 상태의 단위 
+atom이 업데이트 되면 atom을 구독한 컴포넌트들이 모두 리랜더링된다  
+
+- Atom 사용 방법
+
+설치 => npm install recoil
+    => yarn add recoil
+예시)    
+const nameCreate = atom({
+key:"nameCreate",
+default: 상태?
+}) 
+
+안에는 두개의 값을 받는다 
+key에는 nameCreate
+default 에는 t/f가 올 수도 있고 상태의 값이 들어가면 되는것 같다.
+
+그 이후 최상위 컴포넌트로 이동해서 
+태그에 <RecoilRoot/> 를 사용 후 임폴트 해주면 !!  
+
+이제 이렇게 사용하면 이 컴포넌트는 전역상태가 되기 때문에 어디에서든 사용이 가능하다!
+
+	ex) const [fontSize, setFontSize] = useRecoilState(nameCreate);
+
+useRecoilState를 임폴트 해주고, 초기값에는 atom에서 만든 nameCreate을 넣어준다.
+
+두 값이 모두 쓰일 때는 useRecoilState,
+초기값만 쓰일 때는 useRecoilValue,
+set값이 쓰일 때는 useSetRecoilState,
+
+
+어떤걸 어려워 했는지
+selector이 뭐죠..?(리코일)
+staleTime과 cacheTime..
+강사님.. 저 라이브쉐어에 대해 질문이 있어요 
+다른 분들이 초대해주신 링크로 들어가면.. 디스코드로 창이 안넘어가고(alert이 뜨지않아용)있어요 ㅠㅠㅠ
+제가 만든것만 되고..
+
+
+
+수현님께
+  const queryClient = new QueryClient(); 이거 우리만들때는 왜 
+  const queryClient = new QueryClient({}); 객체썻더라..?
