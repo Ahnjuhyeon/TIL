@@ -610,3 +610,22 @@ mutate..?
 수현님께
   const queryClient = new QueryClient(); 이거 우리만들때는 왜 
   const queryClient = new QueryClient({}); 객체썻더라..?
+
+=====================================================================================
+
+10/24
+[공부할 내용]
+useMutation 사용방법
+
+[공부한 내용]
+어떤걸 했는지
+useMutation사용
+
+어떤걸 알게 됐는지
+import {} from "경로" => 앞에 export const 일 경우 (export가 여러개로 되어 있을 경우 key 처럼 사용 )
+import    from "경로" => export default 컴포넌트명 (export가 1개일 경우, 이름은 다르게 지어도 된다)
+return은 반환값이가도 하지만 탈출문이기도 하다 (종료문) 알고 쓰자 
+모르는 코드는 쓰지말자 
+
+어떤걸 어려워 했는지
+useMutation 너무 어렵다..
