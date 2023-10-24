@@ -555,12 +555,55 @@ useRecoilState를 임폴트 해주고, 초기값에는 atom에서 만든 nameCre
 set값이 쓰일 때는 useSetRecoilState,
 
 
+=============================
+
+[react-query] 
+백엔드의 전역상태를 관리해주는 라이브러리 
+이 라이브러리를 사용하면 캐싱도 해주고(데이터를 한번 가지고 오면 일정시간동안 
+내가 또 데이터를 요청해도 다시 가지고 오는게 아니라 캐싱되어있는 값을 준다?)
+,서버의 데이터를 가져오는 방법이 훨씬 간단해진다.
+
+사용방법
+
+설치 => npm i react-query
+    => yarn add react-query
+강사님이 가르쳐주신 리코일하고 리액트쿼리 같이 설치하는건~
+yarn add recoil @tanstack/react-query @tanstack/react-query-devtools
+
+일단 axios로 공부했으니까 
+axios만들어주고! 
+데이터 잘 오는지 까지 확인하고!
+
+const {data} =  useQuery('todos', fetchTodoList)  를 해준다 
+첫번째에는 지어줄 이름 queryKey,
+두번째에는 불러올 함수 queryFn,
+를 넣어주는데 공식페이지에는 저렇게도 되어있고
+
+  const { data } = useQuery({
+    queryKey: ["getTodo"],
+    queryFn: ApiTodo.getTodo,
+  });
+
+나는 요것이 더 잘 이해되더라~ 여기서 useQuery는 임폴트 해준다
+
+그 이후 최상위 컴포넌트로 이동해서
+  const queryClient = new QueryClient();
+불러주고,
+
+컴포넌트들을 QueryClientProvider로 감싸준다! 이때 값을 client={queryClient} 로 담아주기까지!
+
+
+
 어떤걸 어려워 했는지
 selector이 뭐죠..?(리코일)
 staleTime과 cacheTime..
 강사님.. 저 라이브쉐어에 대해 질문이 있어요 
 다른 분들이 초대해주신 링크로 들어가면.. 디스코드로 창이 안넘어가고(alert이 뜨지않아용)있어요 ㅠㅠㅠ
 제가 만든것만 되고..
+
+내일 할 공부
+staleTime과 cacheTime..
+mutate..?
 
 
 
